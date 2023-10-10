@@ -1,0 +1,99 @@
+coleccion=tablas 
+documentos=informacion en las tablas
+
+mongod
+mongosh
+show dbs;
+use redsocial;
+db.createCollection("(nombre de la base de datos)");
+use demo;
+db.dropDatabase(); / eliminar base de datos
+
+cls / limpiar pantalla
+
+use redsocial  /crear o abir base de datos
+ 
+db.createCollection("post");  /crear documento
+db.createCollection("libros");
+db.createCollection("usuarios");
+
+db.(nombre de la collection).insertOne(); /insertar documento
+
+db.post.insertOne({nombre: "Ingenioteka", fecha: "abril 22", description: "hola como estan todos"});
+
+
+db.(nombre de la collection).insertMany({},{},{});
+
+db.post.insertMany({nombre: "Ingenioteka", fecha: "mayo 10", description: "Feliz dia de las madres"},{nombre: "Ingenioteka", fecha: "mayo 111", description: "Feliz dia"});
+
+
+db.post.find(); / mostrar documentos
+
+db.post.find({nombre: {$eq: "javier"}})
+
+db.post.insertOne({nombre: "carlos", fecha: "enero 20", descripcion: "hoy no hay clase", like: 15 })
+db.post.insertOne({nombre: "maria", fecha: "diciembre 28", descripcion: "hay fiesta", like: 3 })
+db.post.insertOne({nombre: "roberto", fecha: "enero 27", descripcion: "hoy es mi cumple", like: 18 })
+db.post.insertOne({nombre: "marissa", fecha: "diciembre 27", descripcion: "hoy descansamos", like: 25 })
+
+
+db.post.find({like: {$lt:6}})
+db.post.find({like: {$lt:100}})
+
+
+db.post.find({like: {$lt:100}}) /menor que
+db.post.find({like: {$lte:100}}) / menor que igual
+db.post.find({like: {$gt:100}})  /mayor que 
+db.post.find({like: {$gte:100}})  / mayor que igual 
+
+
+db.post.insertOne({nombre: "pilar", fecha: "junio 18", descripcion: "cursos gratuitos", like: 150 });
+db.post.insertOne({nombre: "fabian", fecha: "mayo 18", descripcion: "acabo de ganar una beca", like: 150});
+db.post.insertOne({nombre: "blanca", fecha: "julio 05", descripcion: "entrenamiento en la sierra", like: 10})
+db.post.insertOne({nombre: "benjamin", fecha: "julio 07", descripcion: "jojojojoj", like: 19 });
+
+
+db.post.find({nombre: {$ne: "luis"}}); /no sean iguales
+db.post.find({nombre: {$ne: "pilar"}});
+db.post.find({like: {$ne: 10}});
+db.post.find({like: {$ne: 150}});
+
+db.post.find({nombre: {$nin: ["pilar", "blanca"]}}); / no dentor de la base de datos  o documento
+
+db.post.find({nombre: {$nin: ["pilar", "blanca"]}}); / corchete para muchos
+
+db.post.find({nombre: {$nin: ["pilar", "blanca", "Ingenioteka", "jessica", "felipe"]}});
+
+
+
+db.post.find({$and:[{nombre: "pilar"},{like: {$gt: 120}}]}) / operador logico y o and 
+
+
+db.post.find({$and:[{nombre: "pilar"},{like: {$gt: 150}}]}) / no arroja noda es igula pero no se usa operador correcto
+
+
+db.post.find({$and:[{nombre: "pilar"},{like: {$gte: 150}}]}) / ya lo arroja
+
+db.post.find({$or:[{nombre: "pilar"},{like: {$gt: 150}}]})
+
+
+db.post.find({nombre: {$ne: "javier"}})
+
+db.post.find({$not: {nombre:"javier"}})
+
+db.post.find({nombre: {$not: {$eq: "javier"}}})
+
+
+db.post.find({like:{$gt: 25}})
+
+db.post.find({like: {$not: {$gt: 25}}})
+
+
+
+
+
+
+
+
+
+
