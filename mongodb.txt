@@ -88,6 +88,23 @@ db.post.find({like:{$gt: 25}})
 
 db.post.find({like: {$not: {$gt: 25}}})
 
+CLASE 2
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+
+db.usuarios.insertOne({_id: 1, nombre: "luis"});
+db.usuarios.insertOne({_id: 2, nombre: "lupe"});
+db.usuarios.insertOne({_id: 3, nombre: "pilar"});
+db.usuarios.insertOne({_id: 4, nombre: "gustavo"});
+db.usuarios.insertOne({_id: 5, nombre: "luis", edad: 23});
+db.usuarios.insertOne({_id: 6, nombre: "carlos", edad: 23});
+db.usuarios.insertOne({_id: 7, nombre: "felipe", edad: 24});
+db.usuarios.insertOne({_id: 8, nombre: "paloma", edad: 30});
+db.usuarios.insertOne({_id: 9, nombre: "octavio", edad: 35});
+db.usuarios.insertOne({_id: 10, nombre: "fermin", edad: 28});
+db.usuarios.insertOne({_id: 11, nombre: "martha", edad: 18});
+
 
 
 
