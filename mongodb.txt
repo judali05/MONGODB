@@ -143,8 +143,18 @@ db.usuarios.find().sort({nombre: 1});   // oderdena de manera asendente
 db.uauarios.find().sort({edad: -1}) // ordena de forma desendente
 
 
+db.usuarios.insetOne({_id: 13, nombre: adso, edad:30});
+
+db.usuarios.find().sort({edad: 1}).pretry // lo orddena creo
+
+db.usuarios.find().limit(5);
+
+db.usuarios.find().sort({ _id: -1 }).limit(2) // se muestra los primeros 2
+
+db.usuarios.find().skip(2); // se salta a aprtir de el numero elegido
 
 
+db.usuarios.find().skip(2).limit(2); 
 
 
 
