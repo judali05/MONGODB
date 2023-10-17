@@ -108,9 +108,24 @@ db.usuarios.insertOne({_id: 11, nombre: "martha", edad: 18});
 
 
 db.usuarios.deleteOne({edad:23});  // elimina solo un el primero que encuentre con ese valor
-
+db.usuarios.deleteMany({edad: 23});  // elimina todos los que tengan la edad de 23
 
 db.usuarios.insertOne({_id: 12, nombre: "monica", edad: 18});
 
 
-db.usuarios.deleteMany({edad: 18});  // elimina todos los que tengan la edad de 23
+db.usuarios.deleteMany({edad: 18});
+
+
+
+db.usuarios.updateOne({edad: 28},{$set: {nombre: "benjamin"}}); // para actualizar el documento se le espesifica que persona y para nodificar se coloca el '$set'
+
+
+db.usuarios.updateMany({edad: {$gte: 30 }},{$set; [{nombre: "marlon"}});
+
+db.usuarios.updateMany({edad: {$gte: 30 }},{$set; [{nombre: "emily"},{edad: 18}] });
+
+
+db.usuarios.updateMany({})
+
+
+
