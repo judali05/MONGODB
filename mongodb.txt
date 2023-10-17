@@ -96,7 +96,7 @@ CLASE 2
 db.usuarios.insertOne({_id: 1, nombre: "luis"});
 db.usuarios.insertOne({_id: 2, nombre: "lupe"});
 db.usuarios.insertOne({_id: 3, nombre: "pilar"});
-db.usuarios.insertOne({_id: 4, nombre: "gustavo"});
+db.usuarios.insertOne({_id: 4, nombre: "gustavo", edad: 23});
 db.usuarios.insertOne({_id: 5, nombre: "luis", edad: 23});
 db.usuarios.insertOne({_id: 6, nombre: "carlos", edad: 23});
 db.usuarios.insertOne({_id: 7, nombre: "felipe", edad: 24});
@@ -107,10 +107,10 @@ db.usuarios.insertOne({_id: 11, nombre: "martha", edad: 18});
 
 
 
+db.usuarios.deleteOne({edad:23});  // elimina solo un el primero que encuentre con ese valor
 
 
+db.usuarios.insertOne({_id: 12, nombre: "monica", edad: 18});
 
 
-
-
-
+db.usuarios.deleteMany({edad: 18});  // elimina todos los que tengan la edad de 23
