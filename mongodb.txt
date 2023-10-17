@@ -135,6 +135,15 @@ db.postfind({},{_id: 0, nombre: 1, fecha: 1});    // con los 0 se refiere que no
 
 
 
+ORDENAMIENTO
+------------
+
+db.usuarios.find().sort({nombre: 1});   // oderdena de manera asendente
+
+db.uauarios.find().sort({edad: -1}) // ordena de forma desendente
+
+
+
 
 
 
