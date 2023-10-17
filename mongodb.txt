@@ -125,7 +125,17 @@ db.usuarios.updateMany({edad: {$gte: 30 }},{$set; [{nombre: "marlon"}});
 db.usuarios.updateMany({edad: {$gte: 30 }},{$set; [{nombre: "emily"},{edad: 18}] });
 
 
-db.usuarios.updateMany({})
+db.usuarios.updateMany({edad: {$gte: 30 }},{$set; {nombre: "emily",edad: 18}} );
+
+
+
+db.post.find({},{nombre: 1, fecha: 1});
+
+db.postfind({},{_id: 0, nombre: 1, fecha: 1});    // con los 0 se refiere que no se muestre - y con el 1 se refiere que se muestre
+
+
+
+
 
 
 
