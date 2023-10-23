@@ -1,0 +1,78 @@
+use BlackLabele;
+
+db.usuarios.insertMany([  
+
+{_id: 1, documento:1011094411, nombre_usuario: "julian", apellido_usuario: "rojas", contraseña: 5410511, correo: "julian@gmail.com", id_estado: 1 },  
+{_id: 2, documento:1022917663, nombre_usuario: "brayan", apellido_usuario: "colon", contraseña: 7874654, correo: "brayan@gmail.com", id_estado: 1 },
+{_id: 3, documento:1022935120, nombre_usuario: "jesus", apellido_usuario: "cabezas", contraseña: 563330, correo: "jesus@gmail.com", id_estado: 1 },
+{_id: 4, documento:1011081741, nombre_usuario: "esteban", apellido_usuario: "salcedo", contraseña: 4599, correo: "esteban@gmail.com", id_estado: 1 },
+{_id: 5, documento:1554789660, nombre_usuario: "jose", apellido_usuario: "vivaz", contraseña: 555, correo: "jose@gmail.com", id_estado: 1 }
+
+]);  
+
+db.permisos.insertMany([
+
+{_id: 1, documentos: 1011094411, id_rol: 1},
+{_id: 2, documentos: 1022927663, id_rol: 2}
+
+]);
+
+db.roles.insertMany([
+
+{_id: 1, rol: "admin"},
+{_id: 2, rol: "cliente"}
+
+]);
+
+db.productos.insertMany([
+
+{_id: 1, codigo_producto: "adc1", nombre_producto: "moto g5", id_categoria: 1, documento: 1011094411, precio_producto: 150000, id_estado: 1},
+{_id: 2, codigo_producto: "ac1", nombre_producto: "redmi", id_categoria: 1, documento: 1022927663, precio_producto: 25000, id_estado: 2},
+{_id: 3, codigo_producto: "efg1", nombre_producto: "computador", id_categoria: 2, documento: 1022935120, precio_producto: 47000, id_estado: 2},
+{_id: 4, codigo_producto: "hij1", nombre_producto: "auriculares lnv", id_categoria: 3, documento: 1011081741, precio_producto: 95000, id_estado: 1},
+{_id: 5, codigo_producto: "klm2", nombre_producto: "mesa electrica", id_categoria: 4, documento: 1554789660, precio_producto: 13000, id_estado: 1}
+
+]);
+
+db.carrito.insertMany([
+
+{_id: 1, codigo_producto: "adc1", precio_producto: 150000, cantidad_producto: 1, total_producto: 150000},
+{_id: 2, codigo_producto: "ac1", precio_producto: 122000, cantidad_producto: 1, total_producto: 122000},
+{_id: 3, codigo_producto: "efg1", precio_producto: 5000, cantidad_producto: 2, total_producto: 10000},
+{_id: 4, codigo_producto: "hij1", precio_producto: 90000, cantidad_producto: 3, total_producto: 270000},
+{_id: 5, codigo_producto: "klm2", precio_producto: 54000, cantidad_producto: 4, total_producto: 216000}
+
+]);
+
+db.estados.insertMany([
+
+{_id: 1, estado: "activo"},
+{_id: 2, estado: "inactivo"}
+
+]);
+
+db.categorias.insertMany([
+
+{_id: 1, categoria: "celular"},
+{_id: 2, categoria: "pc"},
+{_id: 3, categoria: "audifonos"},
+{_id: 4, categoria: "muebles"}
+
+]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
