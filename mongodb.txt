@@ -198,6 +198,53 @@ db.clientes.find({"direcccion.calle": "colon"});
 db.clientes.find({$and: [{"direccion.calle": "colon"},{"direccion.numero": {$gte: 1, $lte: 1000} }]});
 
 
+db.autos.insertMany([
+{placa:"AAA111",fechahora:new Date()},
+{placa:"BBB111",fechahora:new Date()},
+{placa:"CCC111",fechahora:new Date()}
+]);
+
+db.Empleados.insertMany([
+{_id:17488834,nombre:"Ana Gomez",fechaingreso:new Date(2001,11,1)},
+{_id:18688835,nombre:"Felipe Gonzales",fechaingreso:new Date(2001,11,2)},
+{_id:19588836,nombre:"Jorge Gutierrez",fechaingreso:new Date(2001,11,3)}
+]);
+
+
+Taller 
+
+Use base1 
+db.Alumnos.drop();
+
+db.Alumnos.insertMany([
+{_id:20456123,Apellido:"Gonzalez",Nombre:"Ana",Docimcilio:"colon  123",FechaNacimiento: new Date(1990,07,15)},
+{_id:45123845,Apellido:"Juares",Nombre:"Bernardo",Docimcilio:"sucre 456",FechaNacimiento: new Date(1964,0,1)},
+{_id:16567512,Apellido:"Perez",Nombre:"Laura",Docimcilio:"21 de septiembre 3233",FechaNacimiento: new Date(1972,03,2)},
+]);
+
+solo el apellido y la fecha de nacimiento 
+
+db.postfind({},{_id: 0, nombre: 1, fecha: 1});
+db.Alumnos.find({},{Apellido: 1, FechaNacimiento: 1}); 
+
+
+todos los datos ordenados de mayor a menor 
+db.Alunnos.find()
+
+
+
+db.uauarios.find().sort({edad: -1})
+
+mostrar la fecha de nacimiento de mayor a menor
+db.Alumnos.find().sort({FechaNacimiento: -1}); 
+
+
+
+imprimir todos los alumnos que nacierton en 1970
+db.post.find({like: {$gte:100}})  / mayor que igual 
+
+db.Alumnos.find({FechaNacimiento:{$gte:new Date}});
+
 
 
 
