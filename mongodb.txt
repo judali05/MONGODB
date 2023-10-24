@@ -166,12 +166,17 @@ db.clientes.insertMany([
 
 {_id: 1, mnombre: "Martinez Victor",mail: "mvictor@gmail.com", direcccion: { calle: "colon", numero: 620, codigopostal: 5000}},
 {_id: 2, mnombre: "Alonso Carlo",mail: "acarlos@gmail.com", direcccion: { calle: "colon", numero: 150, codigopostal: 5000}},
-{_id: 3, mnombre: "Gonzales Marta",mail: "gmarta@outlook.com", direcccion: { calle: "colon", numero: 1200, codigopostal: 5000}},
+{_id: 3, mnombre: "Gonzales Marta",mail: "gmarta@outlook.com", direcccion: { calle: "colon", numero: 1200, codigopostal: 5000}}
 
 ]);
 
 
+db.clientes.insertMany([
 
+{_id: 4, mnombre: "Ferrero Ariel",mail: "fariel@yahoo.com", direcccion: { calle: "Dean Funes", numero: 23, codigopostal: 5002}},
+{_id: 5, mnombre: "Fernandez Diego",mail: "fdiego@gmail.com", direcccion: { calle: "Desn Funes", numero: 561, codigopostal: 5002}}
+
+]);
 
 
 
