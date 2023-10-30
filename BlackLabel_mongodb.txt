@@ -80,6 +80,34 @@ db.productos.find().sort({id_categoria:-1});
 
 
 
+----------------------------------------------------------------------------------
+
+db.usuarios.find();
+
+db.productos.find({ precio_producto: { $gte: 100000 } });
+
+db.productos.find({ id_categoria: 1 });
+
+db.productos.find({ documento: 1011094411 });
+
+db.carrito.find({ codigo_producto: "ac1", precio_producto: { $gte: 50000 } });
+
+db.usuarios.update({ documento: 1011094411 }, { $set: { id_estado: 2 } });
+
+db.usuarios.find({ nombre_usuario: /^j/ });
+
+db.usuarios.findOne({ correo: "brayan@gmail.com" });
+
+db.usuarios.find().sort({ documento: 1 }).limit(1);
+
+db.productos.find().sort({ precio_producto: -1 }).limit(1);
+
+db.productos.find({ precio_producto: { $gte: 10000, $lte: 50000 } });
+
+db.usuarios.find({ id_estado: 1 });
+
+
+
 
 
 
