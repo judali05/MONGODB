@@ -61,6 +61,27 @@ db.categorias.insertMany([
 ]);
 
 
+//Consultas a realizar en la base de datos 
+
+db.Usuarios.find()
+db.Usuarios.find({_id:4});
+
+db.roles.find()
+db.roles.find({_id:2});
+
+db.carrito.find()
+db.carrito.find({precio_producto:{$lt:150000}});
+db.carrito.find({cantidad_producto:{$lte:1}});
+db.carrito.find({total_producto:{$gt:10000}});
+
+db.productos.find().sort({id_categoria:1});
+db.productos.find().sort({id_categoria:-1});
+
+
+
+
+
+
 
 
 
