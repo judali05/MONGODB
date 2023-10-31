@@ -122,6 +122,17 @@ db.productos.find().limit(3);
 
 db.usuarios.find().sort({apellido_usuario: -1}) ;
 
+db.usuarios.aggregate([
+  {
+    $lookup: {
+      from: "roles",
+      localField: "id_rol",
+      foreignField: "_id",
+      as: "roles"
+    }
+  }
+]);
+
 
 
 
